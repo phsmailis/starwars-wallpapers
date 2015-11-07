@@ -1,0 +1,19 @@
+
+
+<h1>Star Wars Wallpapers</h1>
+<br>
+<% @wallpapers.in_groups_of(3) do |group| %>
+  <div class="row">
+    <% group.compact.each do |wallpaper| %>
+      <div class="col-md-4">
+        <%= image_tag wallpaper.picture_url, :size => '300x200' if wallpaper.picture.present?%>
+        <h4><%= link_to wallpaper.name, wallpaper %></h4>
+        <%= wallpaper.description %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<br>
+
+<%= link_to 'New Wallpaper', new_wallpaper_path %>
