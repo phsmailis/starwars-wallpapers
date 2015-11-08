@@ -4,8 +4,8 @@
   </div>
 
   <div class="col-md-3">
-    <h4><b>Name: </b><%= @wallpaper.name %></h4>
-    <h4><b>Description: </b><%= @wallpaper.description %></h4>
+    <h4 id='name'><b>Name: </b><%= @wallpaper.name %></h4>
+    <h4 id='name'><b>Description: </b><%= @wallpaper.description %></h4>
     <p>
       <%= link_to 'Edit', edit_wallpaper_path(@wallpaper) %> |
       <%= link_to 'Destroy', @wallpaper, data: { confirm: 'Are you sure?' }, method: :delete %> |
@@ -14,7 +14,7 @@
   </div>
 </div>
 
- <h4>Comments</h4>
+ <h4 id='name'>Comments</h4>
 <% @wallpaper.comments.each do |comment| %>
   <p>
     <strong>Commenter:</strong>
@@ -32,7 +32,7 @@
                  data: { confirm: 'Are you sure?' } %>
 <% end %>
 
-<h4>Add a comment:</h4>
+<h4 id='name'>Add a comment:</h4>
 <%= form_for([@wallpaper, @wallpaper.comments.build]) do |f| %>
   <p>
     <%= f.label :commenter %><br>

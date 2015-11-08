@@ -6,10 +6,15 @@
   <div class="row">
     <% group.compact.each do |wallpaper| %>
       <div class="col-md-4">
+        <div class='thumbnail'>
         <%= image_tag wallpaper.picture_url, :size => '300x200' if wallpaper.picture.present?%>
-        <h4><%= link_to wallpaper.name, wallpaper %></h4>
-        <%= wallpaper.description %>
+        <div class='caption'>
+        <h4 class='img_name'><%= link_to wallpaper.name, wallpaper %></h4>
+        <p class='img_desc'><%= wallpaper.description %></p>
+        <br><br>
       </div>
+    </div>
+    </div>
     <% end %>
   </div>
 <% end %>
