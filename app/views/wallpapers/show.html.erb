@@ -14,24 +14,7 @@
   </div>
 </div>
 
- <h4 id='name'>Comments</h4>
-<% @wallpaper.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
-
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-
-  <p>
-    <%= link_to 'Destroy Comment', [comment.wallpaper, comment],
-                 method: :delete,
-                 data: { confirm: 'Are you sure?' } %>
-<% end %>
-
+<div class='col-md-5'>
 <h4 id='name'>Add a comment:</h4>
 <%= form_for([@wallpaper, @wallpaper.comments.build]) do |f| %>
   <p>
@@ -46,3 +29,24 @@
     <%= f.submit %>
   </p>
 <% end %>
+</div>
+<div class='col-md-6'>
+ <h4 id='name'>Comments</h4>
+<% @wallpaper.comments.each do |comment| if comment.present? %>
+  <p>
+    <!-- <strong>Commenter:</strong> -->
+    <%= comment.commenter %>
+  </p>
+
+  <p>
+    <!-- <strong>Comment:</strong> -->
+    <%= comment.body %>
+  </p>
+
+  <p>
+    <%= link_to 'Destroy Comment', [comment.wallpaper, comment],
+                 method: :delete,
+                 data: { confirm: 'Are you sure?' } %>
+<% end %>
+<% end %>
+</div>

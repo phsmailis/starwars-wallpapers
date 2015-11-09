@@ -1,6 +1,6 @@
 
 
-<h1>Star Wars Wallpapers</h1>
+<h1 id='header'>Star Wars Wallpapers</h1>
 <br>
 <% @wallpapers.in_groups_of(3) do |group| %>
   <div class="row">
@@ -8,10 +8,12 @@
       <div class="col-md-4">
         <div class='thumbnail'>
         <%= image_tag wallpaper.picture_url, :size => '300x200' if wallpaper.picture.present?%>
-        <div class='caption'>
+        <div class='caption text-center'>
         <h4 class='img_name'><%= link_to wallpaper.name, wallpaper %></h4>
+        <div class='well well-sm'>
         <p class='img_desc'><%= wallpaper.description %></p>
         <br><br>
+      </div>
       </div>
     </div>
     </div>
@@ -20,5 +22,3 @@
 <% end %>
 
 <br>
-
-<%= link_to 'New Wallpaper', new_wallpaper_path %>

@@ -17,18 +17,43 @@
    color: gray;
  }
 
+ a:hover {
+   text-decoration: none;
+   color: darkgray;
+
+ }
+
  p {
    color: gray;
  }
 
+
  h1 {
+   font-family: 'Sigmar One';
    color: gray;
-   font-weight: bold;
+   /*font-weight: bold;*/
    text-align: center;
+   font-size: 4em;
+ }
+
+ .rules {
+   background-color: gray;
+   border: solid white;
+   height: 25em;
+   margin-top: 20px;
+   font-size: .5em;
+   border-radius: 10px;
+ }
+
+
+ #rules_head {
+   color: black;
+   font-family: sans-serif;
  }
 
  #name {
    color: gray;
+   font-family: sans-serif;
  }
 
  .thumbnail {
@@ -38,12 +63,14 @@
 .img_name {
   color: blue;
   font-style: bold;
-  font-size: 1.5em;
+  font-size: 1.8em;
+  font-family: 'Sigmar One'
 }
 
 .img_desc {
   color: black;
-  font-size: 1em;
+  font-size: 1.3em;
+  font-family: sans-serif;
 
 }
 
@@ -52,7 +79,7 @@
 }
 
 img {
-  border: solid black 1em;
+  border: solid black .5em;
 }
 
 html {
@@ -61,4 +88,5 @@ html {
 
 body {
   background-color: black;
+
 }
