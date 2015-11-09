@@ -5,9 +5,9 @@
 <% @wallpapers.in_groups_of(3) do |group| %>
   <div class="row">
     <% group.compact.each do |wallpaper| %>
-      <div class="col-md-4">
+      <div class="col-xs-12 col-sm-4 col-md-4">
         <div class='thumbnail'>
-        <%= image_tag wallpaper.picture_url, :size => '300x200' if wallpaper.picture.present?%>
+        <%= image_tag wallpaper.picture_url, class:'img-responsive' if wallpaper.picture.present?%>
         <div class='caption text-center'>
         <h4 class='img_name'><%= link_to wallpaper.name, wallpaper %></h4>
         <div class='well well-sm'>

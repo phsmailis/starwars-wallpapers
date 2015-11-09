@@ -33,7 +33,7 @@
    color: gray;
    /*font-weight: bold;*/
    text-align: center;
-   font-size: 4em;
+   font-size: 3em;
  }
 
  .rules {
@@ -79,7 +79,7 @@
 }
 
 img {
-  border: solid black .5em;
+  border: solid darkgray .5em;
 }
 
 html {
